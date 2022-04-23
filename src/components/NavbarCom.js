@@ -11,7 +11,7 @@ const NavbarCom = () => {
   return (
     <nav className='navbar_items'>
     <div className='navbar_brand'>
-  <a href='/'>Strona z artykułami</a>
+  <a href='/' >Strona z artykułami</a>
   </div>
     <div className='navbar_links'>
         <li onMouseEnter={()=>{setOpen1(!open1)}} onMouseLeave={()=>{setOpen1(!open1)}}><a href='#'>TECH</a>{open1 && (<ul className='drop'><li ><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li></ul>)}</li>
@@ -23,9 +23,9 @@ const NavbarCom = () => {
       </div>
   <div className='search_menu'>
           <form className='form'>
-        <input type="text" placeholder='Napisz cos'>
+        <input className='navbar_input' type="text" placeholder='Napisz cos'>
         </input>
-        <button>
+        <button className='navbar_button'>
         <BsSearch className='search'>Search</BsSearch>
         </button>
       </form>

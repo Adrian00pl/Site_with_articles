@@ -34,12 +34,12 @@ li{
     
 }
 
-a{
+.navbar_links a {
     display: block;
     text-decoration: none;
     padding: 15px;
     font-weight: 600;
-
+    color: white;
 }
 
 
@@ -54,12 +54,12 @@ height: 20px;
     align-items: center;
     background-color: #353535;
     }
-button{
+.navbar_button{
     background-color:#353535;
     border: none;
     padding: 10px;
 }
-input{
+.navbar_input{
     width: 200px;
     border-radius: 5px;
 }

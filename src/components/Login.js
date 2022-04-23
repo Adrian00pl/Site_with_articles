@@ -41,8 +41,9 @@ const handleSubmit = async (e)=>{
 
   return (
     <div className='main'>
+        <div className='login_container'>
         <h1>Sign In</h1>
-        <form onSubmit={handleSubmit}> 
+        <form onSubmit={handleSubmit} className='login_form'> 
             <label htmlFor='username'>Username:</label>
             <input type='text' id='username' ref={userRef} autoComplete='off' value={user} required onChange={(e)=>setUser(e.target.value)}/>
             <label htmlFor='password'>Password:</label>
@@ -51,9 +52,10 @@ const handleSubmit = async (e)=>{
         </form>
         <p>
             <span>
-                <a href='#'>Sign Up</a>
+                <a href='/register'>Sign Up</a>
             </span>
         </p>
+        </div>
         </div>
   )
 }

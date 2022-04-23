@@ -4,6 +4,7 @@ import NavbarCom from './components/NavbarCom';
 import BodyCom from './components/BodyCom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
+import Register from './components/Register'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
         <Route path='/' element={<BodyCom/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
         </Routes>
       </div>
     </div>
