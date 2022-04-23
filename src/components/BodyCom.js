@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './BodyCss.css';
+import api from './api/posts'
 const BodyCom = () => {
+  useEffect(()=>{
+    const fetch = async ()=>{
+      try{
+        const response = await api.get('/api/post/getAll')
+        console.log(response.data)
+
+      }
+      catch(err){
+        console.log(err)
+
+      }
+    }
+    fetch();
+    }, [])
+
   return (
     <div className='main'>
         <div className='box'>
