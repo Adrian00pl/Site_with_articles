@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
-import './BodyCss.css';
-import api from './api/posts'
+import axios from '../api/axios'
 import { BiRightArrowAlt } from 'react-icons/bi';
-const BodyCom = () => {
+const Home= () => {
   useEffect(()=>{
     const fetch = async ()=>{
       try{
-        const response = await api.get('/api/post/getAll')
+        const response = await axios.get('/api/post/getAll')
         console.log(response.data)
 
       }
@@ -19,15 +18,13 @@ const BodyCom = () => {
     }, [])
 
   return (
-    <div className='main'>
+    <div className='main_body'>
         <div className='box'>
           <h1>Reklama</h1>
         </div>
         <div className='rec'>
-        <div>
           <h1>Polecane
           </h1>
-          </div>
           <div className='rec_container'>
         <div className='rec1'>
           </div>
@@ -43,7 +40,7 @@ const BodyCom = () => {
           </div>
         <div className='hot_posts'>
           <div className='primary'>
-            <ul>
+            <ul className='body_ul'>
               <li>
                 <article className='article'>
                   <div>
@@ -80,4 +77,4 @@ const BodyCom = () => {
   )
 }
 
-export default BodyCom
+export default Home

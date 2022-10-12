@@ -1,9 +1,7 @@
 import React from 'react'
-import './AddPostCss.css';
 
 const AddPost = () => {
-  const handleSubmit = async (e)=>{
-    /*
+      /*
     e.preventDefault();
     try{
         const response = await axios.post(LOGIN_URL,JSON.stringify({user,password}),{headers: {'Content-Type': 'application/json'}, withCredentials:true})
@@ -20,6 +18,8 @@ const AddPost = () => {
 
     setSuccess(true);
     */
+  const handleSubmit = async (e)=>{
+
 }
   return (
     <div className='main'>
