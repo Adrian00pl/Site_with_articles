@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import axios from '../api/axios'
 import { BiRightArrowAlt } from 'react-icons/bi';
+import { PaginationControl } from 'react-bootstrap-pagination-control';
 const Home= () => {
+  const [data, setData] = useState([]);
   useEffect(()=>{
     const fetch = async ()=>{
       try{
-        const response = await axios.get('/api/post/getAll')
+        const response = await axios.get('/api/article/getAll')
         console.log(response.data)
+        setData(response.data)
 
       }
       catch(err){
@@ -41,21 +44,21 @@ const Home= () => {
         <div className='hot_posts'>
           <div className='primary'>
             <ul className='body_ul'>
-              <li>
+            <li>
+              {data.map((item,key)=>
                 <article className='article'>
                   <div>
                   <img src='https://cdn.boop.pl/uploads/2022/07/twoj-sklep-lol-2-259x143.jpg'></img>
                   </div>
-                  <div>
+                  <div className='article_body'>
                   <header>
-                    <span>League of Legend</span>
-                  <h3>“Twój sklep” z League of Legends ponownie trafił na PBE. Co warto o nim wiedzieć?</h3>
-                  </header>
-                  <footer>
-                    <p>godzinę temu</p>
-                  </footer>
+                        <span>{item.articleTags[0].name}</span>
+                        <h3>{item.title}</h3>
+                      </header><footer>
+                          <p>{item.creationDate}</p>
+                        </footer>
                   </div>
-                </article>
+                </article>)}
               </li>
             </ul>
             </div> 
@@ -63,15 +66,6 @@ const Home= () => {
 
 
         </div>
-        <nav>
-          <ul className='sites'>
-          <li><a href='#'>1</a></li>
-          <li><a href='#'>2</a></li>
-          <li><a href='#'>3</a></li>
-          <li><a href='#'>4</a></li>
-          <li><a href='#'>Następna<BiRightArrowAlt/></a></li>
-          </ul>
-          </nav>
         </div>
     </div>
   )

@@ -28,7 +28,7 @@ useEffect(()=>{
 const handleSubmit = async (e)=>{
     e.preventDefault();
     try{
-        const response = await axios.post(LOGIN_URL,JSON.stringify({user,pwd:password}),{headers: {'Content-Type': 'application/json'}, withCredentials:true})
+        const response = await axios.post('http://localhost:3500/auth',JSON.stringify({user,pwd:password}),{headers: {'Content-Type': 'application/json'}, withCredentials:true})
         const accessToken = response?.data?.accessToken;
         const roles = response?.data?.roles;
         setAuth({user,password,roles,accessToken})

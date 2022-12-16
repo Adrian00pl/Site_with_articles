@@ -30,11 +30,11 @@ const NavbarCom = () => {
       </div>
       <div className='navbar_links'>
       
-        <li onMouseEnter={() => { setOpen1(!open1) }} onMouseLeave={() => { setOpen1(!open1) }}><a href='#'>League of Legends</a>{open1 && (<ul className='drop'><li ><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li></ul>)}</li>
-        <li onMouseEnter={() => { setOpen2(!open2) }} onMouseLeave={() => { setOpen2(!open2) }}><a href='#'>CS:GO</a>{open2 && (<ul className='drop'><li ><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li></ul>)}</li>
-        <li onMouseEnter={() => { setOpen3(!open3) }} onMouseLeave={() => { setOpen3(!open3) }}><a href='#'>Overwatch 2</a>{open3 && (<ul className='drop'><li ><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li></ul>)}</li>
-        <li onMouseEnter={() => { setOpen4(!open4) }} onMouseLeave={() => { setOpen4(!open4) }}><a href='#'>Path of Exile</a>{open4 && (<ul className='drop'><li ><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li><li><a href='#'>AAAAAAAAA</a></li></ul>)}</li>
-        <li><a href='#'>Kontakt</a></li>
+        <li onMouseEnter={() => { setOpen1(!open1) }} onMouseLeave={() => { setOpen1(!open1) }}><Link to='league-of-legends'>League of Legends</Link></li>
+        <li onMouseEnter={() => { setOpen2(!open2) }} onMouseLeave={() => { setOpen2(!open2) }}><Link to='CS-GO'>CS:GO</Link></li>
+        <li onMouseEnter={() => { setOpen3(!open3) }} onMouseLeave={() => { setOpen3(!open3) }}><Link to='overwatch-2'>Overwatch 2</Link></li>
+        <li onMouseEnter={() => { setOpen4(!open4) }} onMouseLeave={() => { setOpen4(!open4) }}><Link to='path-of-exile'>Path of Exile</Link></li>
+        <li><Link to='contact'>Kontakt</Link></li>
         
       </div>
       <div className='search_menu'>
